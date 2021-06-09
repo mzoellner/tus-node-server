@@ -251,6 +251,7 @@ describe('FileStore', () => {
             .then((file) => {
                 return file_store.write(write_stream, file.id, 0)
             })
+            .catch(() => {})
             .finally(() => done())
         });
     });
